@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+a:hover {
+   color: #fff;
+   background-color: #000;
+}
+
+.top-header {
+   margin: 20px 30px 10px 30px;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.top-body {
+   margin-left: 60px;
+   font-size: 10px;
+}
+
+.top-text {
+   line-height: 40px;
+}
+
+.top-text span {
+   font-weight: bold;
+}
+
+.top-start {
+   line-height: 50px;
+}
+
+
