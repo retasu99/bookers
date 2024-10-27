@@ -2,7 +2,9 @@
   <!--%= flash[:notice] %>-->
 <!--</div>-->
 
-<h1>Editing Book</h1>
+<div class="edit-header">
+  Editing Book
+</div>
 
 <!------------------------------------------------------------------------->
 
@@ -17,15 +19,19 @@
 
 <!---------------------------------------------------------------------------->
 
+<div class="edit">
+
 <%= form_with model: @book, url: book_path(@book.id), method: :patch do |f| %>
 
-  <h4>Title</h4>
+  <div class="edit-title">Title</div>
   <%= f.text_field :title %>
 
-  <h4>Body</h4>
+  <div class="edit-body">Body</div>
   <%= f.text_area :body %>
 
-  <%= f.submit 'Update Book' %>
+  <div class="edit-button">
+    <%= f.submit 'Update Book' %>
+  </div>
 
 <% end %>
 
@@ -34,3 +40,5 @@
 |
 <%= link_to "Back", '/books' %>
 </span>
+
+</div>
