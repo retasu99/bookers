@@ -22,6 +22,19 @@
    box-sizing: border-box;
 }
 
+.flash-message {
+   padding: 16px 24px;
+   margin: 16px 0;
+}
+
+.flash-message.notice {
+   color: green;
+}
+
+.flash-message.alert {
+   color: red;
+}
+
 a:link {
    color: #080808;
 }
@@ -75,7 +88,7 @@ a:hover {
 }
 
 .list {
-   margin-left: 25px;
+   margin-left: 20px;
    border-spacing: 15px 10px;
    font-size: 10px;
 }
@@ -106,5 +119,14 @@ th {
    font-size: 10px;
 }
 
+/*--------------------------------------------------------*/
 
+.show p {
+   margin: 25px 55px;
+   font-size: 10px;
+}
 
+.show-link span {
+   margin-left: 25px;
+   font-size: 10px;
+}

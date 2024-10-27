@@ -11,7 +11,7 @@ class BooksController < ApplicationController
       flash[:notice] = "Successfully Posted"
       redirect_to book_path(@book.id)
     else
-      flash.now[:notice] = "Unsuccessfully Posted"
+      flash.now[:alert] = "Unsuccessfully Posted"
       @books = Book.all
       render :index
     end
@@ -31,7 +31,7 @@ class BooksController < ApplicationController
       flash[:notice] = "Successfully Updated"
       redirect_to book_path(@book.id)
     else
-      flash.now[:notice] = "Unsuccessfully Updated"
+      flash.now[:alert] = "Unsuccessfully Updated"
       render :edit
     end
   end
