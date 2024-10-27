@@ -2,17 +2,19 @@
   <%= flash[:notice] %>
 </div>
 
-<h1>Books</h1>
+<div class="index-header">
+  Books
+</div>
 <!----------------------------------------------------------------------->
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-  </tr>
+<div class="list-header">
+  <span>Title</span>
+  <span>Body</span>
+</div>
 
+<table class="list">
   <% @books.each do |book| %>
-    <tr>
+    <tr align="left">
       <th><%= book.title %></th>
       <th><%= book.body %></th>
       <th><%= link_to "Show", book_path(book.id) %></th>
@@ -26,7 +28,9 @@
 <!--=====================================================================-->
 
 
-<h1>New book</h1>
+<div class=create-header>
+  New book
+</div>
 
 <!-------------------------------------------------------------------------->
 
@@ -40,16 +44,19 @@
 <% end %>
 
 <!------------------------------------------------------------------------------->
+<div class="create">
+  <%= form_with model: @book, url: '/books', method: :post do |f| %>
 
-<%= form_with model: @book, url: '/books', method: :post do |f| %>
+    <div class="create-title">Title</div>
+    <%= f.text_field :title %>
 
-  <h4>Title</h4>
-  <%= f.text_field :title %>
+    <div class="create-body">Body</div>
+    <%= f.text_area :body %>
 
-  <h4>Body</h4>
-  <%= f.text_area :body %>
+    <div class="create-button">
+      <%= f.submit 'Create Book' %>
+    </div>
 
-  <%= f.submit 'Create Book' %>
-
-<% end %>
+  <% end %>
+</div>
 
