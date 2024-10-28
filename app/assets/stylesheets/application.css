@@ -23,16 +23,12 @@
 }
 
 .flash-message {
-   padding: 16px 24px;
-   margin: 16px 0;
+   margin: 25px 0 25px 50px;
+   font-size: 10px;
 }
 
 .flash-message.notice {
    color: green;
-}
-
-.flash-message.alert {
-   color: red;
 }
 
 a:link {
@@ -46,6 +42,27 @@ a:visited {
 a:hover {
    color: #fff;
    background-color: #000;
+}
+
+.error-box {
+   width: 25%;
+   height: 100px;
+   margin-left: 25px;
+   border: solid;
+   border-color: red;
+}
+
+.error-box p {
+   padding-left: 10px;
+   font-size: 10px;
+   color: white;
+   background-color: red;
+}
+
+.error-box-list {
+   padding-top: 25px;
+   padding-left: 50px;
+   font-size: 10px;
 }
 
 /*---------------------------Top Page-------------------------------*/
